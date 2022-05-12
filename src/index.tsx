@@ -7,6 +7,7 @@ import App from './App';
 import store from './redux/store';
 import i18n from './i18n';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
   <React.StrictMode>

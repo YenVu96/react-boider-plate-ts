@@ -1,18 +1,48 @@
 import React from 'react';
 
-interface ButtonI {
+interface ButtonCommon {
   className?: string;
   type?: 'button' | 'submit' | 'reset' | undefined;
-  onChange?: React.FormEventHandler<HTMLButtonElement>;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  onKeyDown?: React.KeyboardEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
+  color?: 'white' | 'primary' | 'red' | 'gray' | 'dark' | 'link' | 'pink';
+  style?: object;
+  onClick?: () => void;
+
+  outline?: boolean;
+  rounded?: boolean;
+
+  block?: boolean;
+  size?: 'lg' | 'sm';
 }
 
-const Button: React.FC<ButtonI> = ({ type = 'button', children, className, onChange, onClick, onKeyDown }) => {
+const ButtonCommon: React.FC<ButtonCommon> = ({
+  type = 'button',
+  children,
+  color,
+  style,
+  onClick,
+  outline,
+  rounded,
+  disabled,
+  size,
+  block,
+}) => {
   return (
-    <button type={type} className={className} onClick={onClick} onKeyDown={onKeyDown} onChange={onChange}>
+    <button
+      type={type}
+      disabled={disabled}
+      className={`
+      btn 
+      btn${outline ? '-outline' : ''}-${color}
+    `}
+      style={style}
+      onClick={onClick}
+    >
       {children}
     </button>
+    // <button type="button" className="btn btn-outline-primary">
+    //   {children}
+    // </button>
   );
 };
-export default Button;
+export default ButtonCommon;

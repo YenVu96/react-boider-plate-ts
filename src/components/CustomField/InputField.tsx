@@ -4,16 +4,16 @@ const InputField = (props: any) => {
   const {
     form,
     field,
-    maxLength,
     placeholder,
     type,
     label,
+    style,
     disabled,
     onChangeCustomize,
     onKeyDown,
-    style,
     invalid,
     className,
+    maxLength,
   } = props;
   const { name, value } = field;
   const { errors, touched } = form;
@@ -24,7 +24,7 @@ const InputField = (props: any) => {
       <input
         {...field}
         style={style}
-        className={`${className} border p-2`}
+        className={`${className} border p-2 form-control form-control-lg`}
         onChange={onChangeCustomize || field.onChange}
         type={type}
         id={name}
@@ -35,6 +35,7 @@ const InputField = (props: any) => {
         invalid={invalid || (!!errors[name] && touched[name])}
         onKeyDown={onKeyDown}
       />
+
       {errors[name] && <div>{errors[name]}</div>}
     </Fragment>
   );

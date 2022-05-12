@@ -5,6 +5,7 @@ body {
   @include darkTheme() {
     --main-color: #ccc;
   }
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 #root {
@@ -14,5 +15,38 @@ body {
 
   > main {
     flex: 1;
+  }
+}
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap !important;
+}
+//@fontface
+// @font-face {
+//   font-family: 'AntoniaText';
+//   src: local('AntoniaText'),
+//     url('./fonts/AntoniaText-Regular.woff2') format('woff2'),
+//     url('./fonts/AntoniaText-Regular.woff') format('woff'),
+//     url('./fonts/AntoniaText-Regular.ttf') format('truetype');
+// }
+
+// Custom dropdown (Remove border and arrows for dropdown field)
+.dropdown {
+  button {
+    background-color: #7e33e0 !important;
+    border: solid #7e33e0 !important;
+    box-shadow: none !important;
+    font-family: 'Josefin Sans' !important;
+  }
+  button:hover {
+    border-color: solid #7e33e0 !important;
+    box-shadow: none !important;
+  }
+  button:focus {
+    border-color: solid #7e33e0 !important;
+    box-shadow: none !important;
   }
 }

@@ -3,7 +3,7 @@
   "singleQuote": true,
   "arrowParens": "always",
   "trailingComma": "all",
-  "endOfLine": "lf",
+  "endOfLine": "auto",
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],

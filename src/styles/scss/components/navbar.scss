@@ -1,0 +1,40 @@
+.navbar-container {
+  height: 70px;
+  background: gray;
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_label {
+      font-size: 30px;
+      line-height: 36px;
+      color: var(--primary-color);
+      margin-right: 88px;
+      font-weight: bold;
+    }
+    &_items {
+      a {
+        color: var(--primary-color) !important;
+        text-decoration: none !important;
+        margin-right: 35px;
+      }
+      a:focus {
+        color: var(--pink-color) !important;
+      }
+    }
+    &_search {
+      min-width: 380px !important;
+      .text {
+        position: relative;
+        .button-common {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          right: 0;
+          top: 0px;
+        }
+      }
+    }
+  }
+}
